@@ -1,32 +1,20 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="Current">
   <PropertyGroup>
-    <TargetFramework>net472</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
+    <IsPackable>false</IsPackable>
   </PropertyGroup>
   <ItemGroup>
-    <Content Remove="C:\Users\Jakub Konecki\.nuget\packages\microsoft.azure.cosmos\3.15.0\contentFiles\any\netstandard2.0\ThirdPartyNotice.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <SpecFlowObsoleteCodeBehindFiles Remove="ReadingStreamAsOfVersion - Copy.feature.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.15.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
-    <PackageReference Include="NodaTime.Serialization.JsonNet" Version="2.2.0" />
-    <PackageReference Include="NUnit" Version="3.13.1" />
-    <PackageReference Include="NUnit3TestAdapter" Version="4.1.0" />
+    <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.26.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="NodaTime.Serialization.JsonNet" Version="3.0.0" />
+    <PackageReference Include="NUnit" Version="3.13.3" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.2.1" />
     <PackageReference Include="RandomGen" Version="1.1.5" />
-    <PackageReference Include="SpecFlow" Version="3.9.40" />
-    <PackageReference Include="SpecFlow.NUnit.Runners" Version="3.9.40" />
-    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.9.40" />
-    <ProjectReference Include="..\Eveneum\Eveneum.csproj" />
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
+    <PackageReference Include="SpecFlow" Version="3.9.58" />
+    <PackageReference Include="SpecFlow.NUnit.Runners" Version="3.9.58" />
+    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.9.58" />
+    <ProjectReference Include="..\Eveneum\Eveneum.csproj" />    
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Advanced.feature.cs">
@@ -227,8 +215,5 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>ReadingStream.feature.cs</LastGenOutput>
     </SpecFlowFeatureFiles>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Properties\" />
   </ItemGroup>
 </Project>

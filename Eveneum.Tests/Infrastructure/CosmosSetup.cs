@@ -13,8 +13,8 @@ namespace Eveneum.Tests.Infrastrature
     {
         public static CosmosClient GetClient(JsonSerializerSettings serializerSettings = null)
         {
-            var endpoint = Environment.GetEnvironmentVariable("CosmosDbEmulator.Endpoint", EnvironmentVariableTarget.User) ?? "https://localhost:8081";
-            var key = Environment.GetEnvironmentVariable("CosmosDbEmulator.Key", EnvironmentVariableTarget.User) ?? "C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw/Jw==";
+            var endpoint = Environment.GetEnvironmentVariable("CosmosDbEmulator.Endpoint", EnvironmentVariableTarget.User) ?? "https://rgbank-test-gzp100-manual.documents.azure.com:443/";
+            var key = Environment.GetEnvironmentVariable("CosmosDbEmulator.Key", EnvironmentVariableTarget.User) ?? "N2PSGoregzsFPcqSGJD6iF1BtPvbp2mwXuPmFMkNmdhgyhSFyp0fHmd57YSCTbMRkmTNMVrxU2RO7nIN73Mfww==";
 
             return new CosmosClient(endpoint, key, new CosmosClientOptions { Serializer = new JsonNetCosmosSerializer(JsonSerializer.Create(serializerSettings ?? new JsonSerializerSettings())) });
         }
